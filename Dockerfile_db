@@ -1,0 +1,6 @@
+FROM mysql:8.0.22
+# https://hub.docker.com/_/mysql
+COPY socka.sql /docker-entrypoint-initdb.d/.
+ENV MYSQL_ROOT_USER=root
+ENV MYSQL_ROOT_PASSWORD=password
+EXPOSE 3306
